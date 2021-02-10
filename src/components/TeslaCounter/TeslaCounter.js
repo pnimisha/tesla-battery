@@ -31,7 +31,7 @@ const TeslaCounter = (props) => {
 }
 
 TeslaCounter.propTypes = {
-    initValues: PropTypes.number,
+    initValues: PropTypes.object,
     currentValue: PropTypes.number,
     increment: PropTypes.func,
     decrement: PropTypes.func

@@ -1,0 +1,9 @@
+.weather {
+	margin: 10px 0 0 10px;
+	border: 1px solid #666;
+	float: left;
+	padding: 20px;
+}
+.weather span {
+	font-weight: 600;
+}

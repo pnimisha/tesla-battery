@@ -8,6 +8,7 @@ import TeslaClimate from '../components/TeslaClimate/TeslaClimate';
 import TeslaWheels from '../components/TeslaWheels/TeslaWheels';
 import { getModelData } from '../services/BatteryService';
 
+
 class TeslaBattery extends React.Component {
     constructor(props) {
         super(props);
@@ -21,14 +22,13 @@ class TeslaBattery extends React.Component {
             }
         }
     }
-
+  
     calculateStats = (models, value) => {
         const dataModels = getModelData();
         return models.map(model => {
-          // ES6 Object destructuring Syntax,
-          // takes out required values and create references to them
+          
           const { speed, temperature, climate, wheels } = value;
-          const miles = dataModels[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
+          const miles = dataModels[model][wheels][climate ? 'on' : 'off']['speed'][speed][temperature];
           return {
             model,
             miles
@@ -103,6 +103,7 @@ class TeslaBattery extends React.Component {
       componentDidMount() {
         this.statsUpdate(); 
       }
+      
     render() {
         const { carstats, config } = this.state
         return (

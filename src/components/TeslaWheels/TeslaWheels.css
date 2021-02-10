@@ -1,6 +1,7 @@
 .tesla-wheels__component {
     float: left;
     width: 355px;
+    margin-left: 35px;
   }
   .tesla-wheels__title {
     letter-spacing: 2px;

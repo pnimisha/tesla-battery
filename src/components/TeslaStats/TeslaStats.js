@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './TeslaStats.css';
 
 const TeslaStats = (props) => {
-    console.log(props);
+    //console.log(props);
   const listItems = props.carstats.map((stat) => (
     <li key={stat.model}>
       <div className={`tesla-stats-icon tesla-stats-icon--${stat.model.toLowerCase()}`}></div>
